@@ -8,7 +8,9 @@
     "start": "node dist/app.js",
     "db:push": "drizzle-kit push --config=drizzle.config.ts",
     "db:migrate": "drizzle-kit migrate --config=drizzle.config.ts",
-    "db:generate": "drizzle-kit generate --config=drizzle.config.ts"
+    "db:generate": "drizzle-kit generate --config=drizzle.config.ts",
+    "clean": "rd /s /q dist || true",
+    "rebuild": "npm run clean && npm run build"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,7 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
     "dotenv": "^16.5.0",
     "drizzle-orm": "^0.41.0",
     "drizzle-zod": "^0.7.1",
@@ -24,6 +27,8 @@
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.14.0",
+    "node-fetch": "^3.3.2",
+    "prettier": "^3.6.2",
     "zod": "^3.24.2"
   },
   "devDependencies": {
